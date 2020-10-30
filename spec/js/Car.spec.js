@@ -36,7 +36,17 @@ describe('Car should behave like a car:', function(){
                 expect(underTest.isSpeeding()).toBeTrue();
             })
 
+            it('isSpeeding should return true if speed is 71', function(){
+                underTest.speed = 71;
+                expect(underTest.isSpeeding()).toBeTrue();
+            })
+
             it('isSpeeding should return false if speed is less than 70', function(){
+                expect(underTest.isSpeeding()).toBeFalse();
+            })
+
+            it('isSpeeding should return false if speed is 70', function(){
+                underTest.speed = 70;
                 expect(underTest.isSpeeding()).toBeFalse();
             })
         })
@@ -53,11 +63,39 @@ describe('Car should behave like a car:', function(){
                 // assert
                 expect(underTest.getSpeed()).toBe(8);
             })
+
+            it('speed cannot go below 0', function(){
+                underTest.brake();
+                expect(underTest.getSpeed()).toBe(0);
+            })
+
+            it('if speed is 0, it remains 0', function(){
+                underTest.speed = 0;
+                underTest.brake();
+                expect(underTest.getSpeed()).toBe(0);
+            })
         })
     })
 
     describe('Car should have an odometer:', function(){
 
+        describe('when speed is greater than 0', function(){
+
+            it('isDriving should return true', function(){
+                underTest.accelerate();
+                expect(underTest.isDriving()).toBeTrue();
+            })
+
+            it('getDistanceTravelled returns 27 when distanceTravelled is 27', function(){
+                underTest.distanceTravelled = 27;
+                expect(underTest.getDistanceTravelled()).toBe(27);
+            })
+
+            it('addMile should increase distanceTravelled by 1', function(){
+                underTest.addMile();
+                expect(underTest.getDistanceTravelled()).toBe(1);
+            })
+        })
     })
 
 
