@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Car</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    
-    <script src="./src/js/app.js"></script>
+    <div class="main">
+        <section class="dashboard">
+            <h2>SPEED:</h2>
+            <h2 class="dashboard__speedometer">initial speed</h2>
+            <h2>DISTANCE:</h2>
+            <h2 class="dashboard__odometer">initial odometer</h2>
+            <h2>ALERTS:</h2>
+            <h2 class="dashboard__warning hidden warning">SLOW DOWN you are speeding!</h2>
+        </section>
+        <section class="floorboard">
+            <button class="floorboard__accelerator">Go Faster!</button>
+            <button class="floorboard__brake">Slow Down!</button>
+        </section>
+    </div>
     <script src="./src/js/Car.js"></script>
+    <script src="./src/js/app.js"></script>
 </body>
 </html>

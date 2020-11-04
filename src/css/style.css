@@ -1,0 +1,56 @@
+body {
+    background-image: url(../images/car-dashboard.jpg);
+    background-size: cover;
+}
+
+button {
+    margin: 2rem 2rem;
+    border-radius: .2rem;
+    height: 2rem;
+    font-size: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.floorboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.floorboard__accelerator {
+    color: black;
+    border-color: green;
+    background-color: green;
+}
+
+.floorboard__brake {
+    color: black;
+    border-color: red;
+    background-color: red;
+}
+
+h2, h3 {
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.main {
+    width: 400px;
+    margin: 2rem auto;
+    padding: 2rem 2rem;
+    background-color: black;
+    border-radius: 1rem;
+    border: solid .5rem rgb(45, 101, 138);
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
